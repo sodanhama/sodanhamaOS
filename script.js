@@ -5,6 +5,7 @@ var timeText = document.querySelector('#time');
 timeText.textContent = currentTime;}
 
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("musicplayer"));
 
 function dragElement(element) {
   var initialX = 0;
@@ -64,4 +65,16 @@ welcomeScreenClose.addEventListener('click', function() {
 
 welcomeScreenOpen.addEventListener('click', function() {
     openWindow(welcome);
+}); 
+
+var musicPlayerOpen = document.querySelector("#musicplayeropen")
+
+var musicPlayerClose = document.querySelector("#musicplayerclose")
+
+musicPlayerClose.addEventListener('click', function() {
+    closeWindow(musicplayer);
+});
+
+musicPlayerOpen.addEventListener('click', function() {
+    openWindow(musicplayer);
 }); 
