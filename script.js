@@ -79,6 +79,13 @@ musicPlayerOpen.addEventListener('click', function() {
     openWindow(musicplayer);
 });
 
+const songName = document.getElementById('songName');
+const songArtist = document.getElementById('songArtist');
+
+const playPauseButton = document.getElementById('musicplayerplaypause');
+const previousButton = document.getElementById('musicplayerprevious');
+const nextButton = document.getElementById('musicplayernext');
+
 const songs = [
   {
     name: "Pigstep",
@@ -92,3 +99,31 @@ const songs = [
   }
 ]
 
+const audio = document.createElement('audio');
+let currentSongIndex = 0;
+
+updateSong();    
+
+previousButton.addEventListener('click', () => {
+  if (currentSongIndex === 0) {return}
+  currentSongIndex--;
+  updateSong();
+})
+
+nextButton.addEventListener('click', () => {
+  if (currentSongIndex === songs.length - 1) {return}
+  currentSongIndex++;
+  updateSong();
+})
+
+playPauseButton.addEventListener('click', () => {
+  if (!audio.paused){audio.pause(); }
+  else{audio.play(); }
+}); 
+
+function updateSong() {
+  const song = songs[currentSongIndex];
+  songName.innerText = song.name;
+  songArtist.innerText = song.artist;
+  audio.src=song.src;
+}
