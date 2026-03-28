@@ -77,4 +77,18 @@ musicPlayerClose.addEventListener('click', function() {
 
 musicPlayerOpen.addEventListener('click', function() {
     openWindow(musicplayer);
-}); 
+});
+
+const songs = [
+  {
+    name: "Pigstep",
+    artist: "Lena Raine",
+    src: "./assets/pigstep.mp3"
+  },
+  {
+    name:"Otherside",
+    artist: "Lena Raine",
+    src: "./assets/otherside.mp3"
+  }
+]
+
