@@ -9,3 +9,4 @@ I made this project using HTML, CSS, and JS. I took inspiration from Hack Club's
 
 Project screenshot:
 
+![](https://hel1.your-objectstorage.com/hackclub-jackpot-attachments/journal-images/597/87fc253f-4816-4916-ae76-8acfecdd6366.png)
